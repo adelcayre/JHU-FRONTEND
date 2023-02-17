@@ -1,0 +1,63 @@
+#header-nav {
+	background-color: grey;
+	border-radius: 0;
+}
+
+
+
+.navbar-brand h1 {
+	
+	color:black;
+	margin:auto;
+	padding:0px;
+}
+
+.navbar-header{
+	margin: 20px;
+}
+
+.navbar{
+		border-bottom: 3px solid black;
+		border-top: 3px solid black;
+		margin-bottom: 0px;
+
+}
+
+div.item{
+	background: grey;
+	margin: 5px;
+	margin-bottom: 30px;
+	padding: 10px;
+}
+p{
+	margin:10px;
+}
+
+
+
+
+
+#collapsible-menu{
+	padding: 0px;
+	border-bottom: 4px solid black;
+
+}
+a{
+	color: black;
+}
+div.item a{
+	color:darkblue;
+}
+
+@media (min-width: 767px){
+	#collapsible-menu{
+		border-bottom: none;
+	}
+}
+
+
+hr{
+	height: 2px;
+	background: black;
+	margin: auto;
+}
