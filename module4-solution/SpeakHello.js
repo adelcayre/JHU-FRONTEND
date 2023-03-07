@@ -19,7 +19,6 @@ helloSpeaker.speak= function (name) {
 }
 
 helloSpeaker.speakSimple= function (name) {
-    
     return speakWord + " " + name;
   }
 
