@@ -26,13 +26,14 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     })
 
     .state('items', {
-      url: '/items/*categoryShortName',
+      url: '/items/{categoryShortName}',
       templateUrl: '/JHU-FRONTEND/module9-solution/items.html',
       controller: 'ItemsController as menu',
       resolve: {
         category:['$stateParams', 'MenuDataService', function($stateParams,MenuDataService){
           return MenuDataService.getItemsForCategory($stateParams.categoryShortName)
           .then(function(response){
+            console.log($stateParams.categoryShortName);
             return response.data;
           });
         }]
