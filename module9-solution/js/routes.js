@@ -9,24 +9,24 @@ RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 function RoutesConfig($stateProvider, $urlRouterProvider) {
 
   // Redirect to home if no other URL matches
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('https://adelcayre.github.io/JHU-FRONTEND/module9-solution');
 
 
 
   // Set up UI states
   $stateProvider
     .state ('home', {
-      url:'/#/',
+      url:'https://adelcayre.github.io/JHU-FRONTEND/module9-solution/',
       templateUrl:'/JHU-FRONTEND/module9-solution/home.html'
     })
     .state('categories', {
-      url: '#/categories',
+      url: 'https://adelcayre.github.io/JHU-FRONTEND/module9-solution/categories',
       templateUrl: '/JHU-FRONTEND/module9-solution/categories.html',
       controller: 'CategoriesController as menu'
     })
 
     .state('items', {
-      url: '#/items/*categoryShortName',
+      url: 'https://adelcayre.github.io/JHU-FRONTEND/module9-solution/items/*categoryShortName',
       templateUrl: '/JHU-FRONTEND/module9-solution/items.html',
       controller: 'ItemsController as menu',
       resolve: {
