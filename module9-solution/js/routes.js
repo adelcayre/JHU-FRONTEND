@@ -16,17 +16,17 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // Set up UI states
   $stateProvider
     .state ('home', {
-      url:'/',
+      url:'JHU-FRONTEND/module9-solution/',
       templateUrl:'/home.html'
     })
     .state('categories', {
-      url: '/categories',
+      url: 'JHU-FRONTEND/module9-solution/categories',
       templateUrl: '/categories.html',
       controller: 'CategoriesController as menu'
     })
 
     .state('items', {
-      url: '/items/*categoryShortName',
+      url: 'JHU-FRONTEND/module9-solution/items/*categoryShortName',
       templateUrl: '/items.html',
       controller: 'ItemsController as menu',
       resolve: {
