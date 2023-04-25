@@ -21,7 +21,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     })
     .state('categories', {
       url: '/JHU-FRONTEND/module9-solution/#/categories',
-      templateUrl: 'categories.html',
+      templateUrl: '/JHU-FRONTEND/module9-solution/categories.html',
       controller: 'CategoriesController as menu'
     })
 
