@@ -16,7 +16,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // Set up UI states
   $stateProvider
     .state ('home', {
-      url:'//JHU-FRONTEND/module9-solution/#/',
+      url:'/JHU-FRONTEND/module9-solution/#/',
       templateUrl:'/JHU-FRONTEND/module9-solution/home.html'
     })
     .state('categories', {
