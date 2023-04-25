@@ -16,17 +16,17 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // Set up UI states
   $stateProvider
     .state ('home', {
-      url:'#/',
-      templateUrl:'/home.html'
+      url:'/',
+      templateUrl:'/home.html#'
     })
     .state('categories', {
-      url: '#/categories',
+      url: '/categories',
       templateUrl: '/categories.html',
       controller: 'CategoriesController as menu'
     })
 
     .state('items', {
-      url: '#/items/*categoryShortName',
+      url: '/items/*categoryShortName',
       templateUrl: '/items.html',
       controller: 'ItemsController as menu',
       resolve: {
