@@ -9,7 +9,7 @@ RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 function RoutesConfig($stateProvider, $urlRouterProvider) {
 
   // Redirect to home if no other URL matches
-  $urlRouterProvider.otherwise('https://adelcayre.github.io/JHU-FRONTEND/module9-solution/#/');
+  $urlRouterProvider.otherwise('/');
 
 
 
