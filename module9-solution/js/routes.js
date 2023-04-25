@@ -16,17 +16,17 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // Set up UI states
   $stateProvider
     .state ('home', {
-      url:'https://adelcayre.github.io/JHU-FRONTEND/module9-solution/#/',
+      url:'/',
       templateUrl:'/JHU-FRONTEND/module9-solution/home.html'
     })
     .state('categories', {
-      url: 'https://adelcayre.github.io/JHU-FRONTEND/module9-solution/#/categories',
+      url: '/categories',
       templateUrl: '/JHU-FRONTEND/module9-solution/categories.html',
       controller: 'CategoriesController as menu'
     })
 
     .state('items', {
-      url: 'https://adelcayre.github.io/JHU-FRONTEND/module9-solution/#/items/*categoryShortName',
+      url: '/items/*categoryShortName',
       templateUrl: '/JHU-FRONTEND/module9-solution/items.html',
       controller: 'ItemsController as menu',
       resolve: {
