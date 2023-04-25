@@ -26,7 +26,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     })
 
     .state('items', {
-      url: '/items/{categoryShortName}',
+      url: '/items/:categoryShortName',
       templateUrl: '/JHU-FRONTEND/module9-solution/items.html',
       controller: 'ItemsController as menu',
       resolve: {
