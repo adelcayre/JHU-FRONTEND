@@ -8,6 +8,8 @@ SignUpController.$inject = ['MenuService', 'MyInfoService'];
 function SignUpController (MenuService, MyInfoService) {
   var info = this;
 
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match used for parsing dish input from html form
+
   info.register = function () {
     var dishInfo = info.dish.match(/[a-zA-Z]+|[0-9]+/g);
     var promise=MenuService.getMenuItem(dishInfo[0], dishInfo[1]-1);
