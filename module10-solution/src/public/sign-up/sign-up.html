@@ -1,0 +1,32 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">Sign Up</h2>
+
+   <div class="form-group">
+   <form name='information' novalidate>
+      <label for="fname">First name:</label>
+      <input id="fname" name="fname" type="text" class="form-control" ng-model="signup.user.fname" required ng-minlength="2" >
+      <span ng-if="(information.fname.$error.required || information.fname.$error.minlength) && information.fname.$touched">Please Enter First Name</span>
+      <br><br>
+      <label for="lname">Last name:</label>
+      <input id="lname" name="lname" type="text" class="form-control" ng-model="signup.user.lname"  required ng-minlength="2" >
+      <span ng-if="(information.lname.$error.required || information.lname.$error.minlength) && information.lname.$touched">Please Enter Last Name</span>
+      <br><br>
+      <label for="email">Email:</label>
+      <input id="email" name="email" placeholder="Example@domain" type="email" class="form-control" ng-model="signup.user.email"  required>
+      <span ng-if="(information.email.$error.required || information.email.$invalid) && information.email.$touched">Must enter a valid email address: handle@domain format</span>
+      <br><br>
+      <label for="phone">Phone:</label>
+      <input type="text" name="phone" placeholder="###-###-####" ng-model="signup.user.phone" pattern="(\d{3})-(\d{3})-(\d{4})" class="form-control"><span ng-if="information.phone.$invalid && information.phone.$touched"> Phone must be in the format ###-###-####.</span>
+      <br><br>
+      <label for="dish">Dish:</label>
+      <input id="dish" type="text" class="form-control" ng-model="signup.dish" ng-change="signup.checkDishExists()" required>
+      <p ng-if="signup.success==-1">No such menu number exists!</p>
+      <br><br>
+      <button ng-disabled="information.$invalid" ng-click="signup.register()" class="btn btn-primary">Submit</button>
+      <p ng-if="signup.success==1">Your information has been saved</p>
+    </form>
+
+      
+    </div>
+
+</div>

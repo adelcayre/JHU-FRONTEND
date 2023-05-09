@@ -1,0 +1,32 @@
+<div ng-if="myinfo.info.fname!=null" class="container">
+  <h2 id="menu-categories-title" class="text-center">My Info</h2>
+
+  <h3 class="text-center">First Name: {{myinfo.info.fname}}</h3>
+  <h3 class="text-center">Last Name: {{myinfo.info.lname}}</h3>
+  <h3 class="text-center">Email: {{myinfo.info.email}}</h3>
+  <h3 class="text-center">Phone: {{myinfo.info.phone}}</h3>
+  <h3 class="text-center">Favorite Dish:</h3>
+
+  <div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div>{{myinfo.info.menuItem.short_name}}</div>
+        <img class="img-responsive" width="250" height="150" ng-src="images/menu/{{myinfo.info.menuItemCategory}}/{{myinfo.info.menuItem.short_name}}.jpg" alt="{{myinfo.info.menuItem.name}}">
+      </div>
+      <div class="menu-item-price">{{myinfo.info.menuItem.price_small | currency}}<span> {{myinfo.info.menuItem.small_portion_name}}</span> {{myinfo.info.menuItem.price_large | currency}} <span>{{myinfo.menuItem.large_portion_name}}</span></div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title">{{myinfo.info.menuItem.name}}</h3>
+      <p class="menu-item-details">{{myinfo.info.menuItem.description}}</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+
+
+
+</div>
+<div class="text-center" ng-if="myinfo.info.fname==null">
+  Not Signed Up Yet! <a ui-sref="public.signUp">Sign Up Here</a>
+</div>
